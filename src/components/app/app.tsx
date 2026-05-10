@@ -106,7 +106,18 @@ const App = () => {
             </ProtectedRoute>
           }
         />
+        // странички модальных окон
         <Route path='*' element={<NotFound404 />} />
+        <Route path='/feed/:number' element={<OrderInfo />} />
+        <Route path='/ingredients/:id' element={<IngredientDetails />} />
+        <Route
+          path='/profile/orders/:number'
+          element={
+            <ProtectedRoute>
+              <OrderInfo />
+            </ProtectedRoute>
+          }
+        />
       </Routes>
 
       {backgroundLocation && (
