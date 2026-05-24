@@ -2,6 +2,7 @@ import { defineConfig, devices } from '@playwright/test';
 
 export default defineConfig({
   testDir: './tests',  // ← ИЗМЕНИТЕ: укажите правильную папку с тестами
+  testIgnore: '**/hars/**/*.spec.ts',
   /* Run tests in files in parallel */
   fullyParallel: false,  // ← ИЗМЕНИТЕ: лучше отключить для стабильности
   /* Fail the build on CI if you accidentally left test.only in the source code. */

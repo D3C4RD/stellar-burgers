@@ -94,7 +94,8 @@
     "lint": "eslint --ext .js,.jsx,.ts,.tsx ./src",
     "lint:fix": "npm run lint -- --fix",
     "format": "prettier ./src --write",
-    "test": "jest"
+    "test:jest": "jest",
+    "test:e2e": "npx playwright test --headed"
   },
   "eslintConfig": {
     "extends": [
